@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katheryn Wright - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Splash Screen -->
+    <div id="splash-screen" class="splash-screen active">
+        <div class="splash-content">
+            <div class="telephone-container">
+                <div class="telephone">
+                    <div class="telephone-body">
+                        <div class="telephone-receiver">
+                            <div class="receiver-handle"></div>
+                            <div class="receiver-cord"></div>
+                        </div>
+                        <div class="telephone-dial">
+                            <div class="dial-center"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ring-animation"></div>
+            </div>
+            <h1 class="splash-title">Ahoy-hoy!</h1>
+            <p class="splash-subtitle">Welcome to Katheryn Wright's Portfolio</p>
+            <button class="enter-button" onclick="enterSite()">
+                <i class="fas fa-phone"></i>
+                Answer the Call
+            </button>
+            <div class="sound-control">
+                <button id="sound-toggle" class="sound-btn" onclick="toggleSound()">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+            </div>
+        </div>
+        <div class="splash-background">
+            <div class="wave wave1"></div>
+            <div class="wave wave2"></div>
+            <div class="wave wave3"></div>
+        </div>
+    </div>
+
+    <!-- Main Portfolio Content -->
+    <div id="main-portfolio" class="main-portfolio">
+        <header class="header">
+            <div class="container">
+                <div class="logo">
+                    <h1>Katheryn Wright</h1>
+                    <p class="tagline">Educator • Researcher • Designer</p>
+                </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active" data-tab="home">Home</a></li>
+                    <li><a href="#cv" class="nav-link" data-tab="cv">CV</a></li>
+                    <li><a href="#courses" class="nav-link" data-tab="courses">Teaching</a></li>
+                    <li><a href="#curriculum" class="nav-link" data-tab="curriculum">Curriculum Design</a></li>
+                    <li><a href="#research" class="nav-link" data-tab="research">Research & Creative Practice</a></li>
+                </ul>
+                <div class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Home Section -->
+        <section id="home" class="tab-content active">
+            <div class="hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <h2 class="hero-title">Welcome to My Portfolio</h2>
+                        <p class="hero-description">
+                            I am an educator, researcher, and curriculum designer passionate about creating 
+                            innovative learning experiences and advancing knowledge through creative practice.
+                        </p>
+                        <div class="hero-buttons">
+                            <button class="btn btn-primary" onclick="showTab('cv')">View My CV</button>
+                            <button class="btn btn-secondary" onclick="showTab('courses')">Explore Teaching</button>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="highlights">
+                <div class="container">
+                    <div class="highlight-grid">
+                        <div class="highlight-card" onclick="showTab('cv')">
+                            <div class="highlight-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <h3>Professional Experience</h3>
+                            <p>Comprehensive overview of my academic and professional journey</p>
+                        </div>
+                        <div class="highlight-card" onclick="showTab('courses')">
+                            <div class="highlight-icon">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <h3>Teaching Excellence</h3>
+                            <p>Innovative courses designed to inspire and educate the next generation</p>
+                        </div>
+                        <div class="highlight-card" onclick="showTab('curriculum')">
+                            <div class="highlight-icon">
+                                <i class="fas fa-book-open"></i>
+                            </div>
+                            <h3>Curriculum Design</h3>
+                            <p>Creating engaging and effective educational frameworks</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Courses Section -->
+        <section id="courses" class="tab-content">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Teaching</h2>
+                    <p>A comprehensive overview of my current and past teaching portfolio</p>
+                </div>
+                
+                <div class="courses-grid">
+                    <div class="course-card">
+                        <div class="course-header">
+                            <h3>Course Title 1</h3>
+                            <span class="course-level">Undergraduate</span>
+                        </div>
+                        <p class="course-description">
+                            Brief description of the course content, objectives, and what students will learn.
+                            This is where you can detail the key concepts and skills covered.
+                        </p>
+                        <div class="course-details">
+                            <span class="course-duration"><i class="fas fa-clock"></i> 12 weeks</span>
+                            <span class="course-students"><i class="fas fa-users"></i> 25-30 students</span>
+                        </div>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="course-header">
+                            <h3>Course Title 2</h3>
+                            <span class="course-level">Graduate</span>
+                        </div>
+                        <p class="course-description">
+                            Another course description highlighting the advanced concepts and research 
+                            components that make this graduate-level course unique.
+                        </p>
+                        <div class="course-details">
+                            <span class="course-duration"><i class="fas fa-clock"></i> 15 weeks</span>
+                            <span class="course-students"><i class="fas fa-users"></i> 15-20 students</span>
+                        </div>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="course-header">
+                            <h3>Course Title 3</h3>
+                            <span class="course-level">Professional Development</span>
+                        </div>
+                        <p class="course-description">
+                            Professional development course designed for working professionals 
+                            looking to enhance their skills and advance their careers.
+                        </p>
+                        <div class="course-details">
+                            <span class="course-duration"><i class="fas fa-clock"></i> 8 weeks</span>
+                            <span class="course-students"><i class="fas fa-users"></i> 10-15 students</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CV Section -->
+        <section id="cv" class="tab-content">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Curriculum Vitae</h2>
+                    <div class="cv-actions">
+                        <button class="btn btn-primary">
+                            <i class="fas fa-download"></i> Download PDF
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="cv-content">
+                    <div class="cv-section">
+                        <h3>Education</h3>
+                        <div class="cv-item">
+                            <div class="cv-item-header">
+                                <h4>Ph.D. in [Your Field]</h4>
+                                <span class="cv-date">Year</span>
+                            </div>
+                            <p class="cv-institution">University Name</p>
+                            <p class="cv-description">Dissertation title and brief description of research focus.</p>
+                        </div>
+                        
+                        <div class="cv-item">
+                            <div class="cv-item-header">
+                                <h4>Master's Degree</h4>
+                                <span class="cv-date">Year</span>
+                            </div>
+                            <p class="cv-institution">University Name</p>
+                            <p class="cv-description">Specialization and key achievements.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cv-section">
+                        <h3>Professional Experience</h3>
+                        <div class="cv-item">
+                            <div class="cv-item-header">
+                                <h4>Current Position</h4>
+                                <span class="cv-date">Year - Present</span>
+                            </div>
+                            <p class="cv-institution">Institution Name</p>
+                            <p class="cv-description">Description of role, responsibilities, and key achievements.</p>
+                        </div>
+                        
+                        <div class="cv-item">
+                            <div class="cv-item-header">
+                                <h4>Previous Position</h4>
+                                <span class="cv-date">Year - Year</span>
+                            </div>
+                            <p class="cv-institution">Institution Name</p>
+                            <p class="cv-description">Description of role and accomplishments.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cv-section">
+                        <h3>Publications</h3>
+                        <div class="cv-item">
+                            <h4>Recent Publications</h4>
+                            <ul class="publication-list">
+                                <li>Author, A., & Wright, K. (Year). "Title of Publication." <em>Journal Name</em>, Volume(Issue), pages.</li>
+                                <li>Wright, K. (Year). "Another Publication Title." <em>Conference Proceedings</em>, pages.</li>
+                                <li>Wright, K., et al. (Year). "Collaborative Research Publication." <em>Academic Journal</em>, Volume(Issue), pages.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Curriculum Design Section -->
+        <section id="curriculum" class="tab-content">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Curriculum Design</h2>
+                    <p>Innovative approaches to educational design and learning experiences</p>
+                </div>
+                
+                <div class="curriculum-content">
+                    <div class="design-philosophy">
+                        <h3>Design Philosophy</h3>
+                        <p>
+                            My approach to curriculum design centers on creating engaging, inclusive, and 
+                            effective learning experiences that meet diverse student needs while maintaining 
+                            academic rigor and relevance to real-world applications.
+                        </p>
+                    </div>
+                    
+                    <div class="design-principles">
+                        <h3>Core Principles</h3>
+                        <div class="principles-grid">
+                            <div class="principle-card">
+                                <div class="principle-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <h4>Student-Centered Learning</h4>
+                                <p>Designing curricula that prioritize student engagement and active participation in the learning process.</p>
+                            </div>
+                            
+                            <div class="principle-card">
+                                <div class="principle-icon">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <h4>Innovation & Creativity</h4>
+                                <p>Incorporating innovative teaching methods and creative approaches to enhance learning outcomes.</p>
+                            </div>
+                            
+                            <div class="principle-card">
+                                <div class="principle-icon">
+                                    <i class="fas fa-balance-scale"></i>
+                                </div>
+                                <h4>Equity & Inclusion</h4>
+                                <p>Ensuring all students have equal opportunities to succeed through inclusive design practices.</p>
+                            </div>
+                            
+                            <div class="principle-card">
+                                <div class="principle-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <h4>Continuous Assessment</h4>
+                                <p>Implementing ongoing evaluation methods to track progress and adjust instruction accordingly.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="design-projects">
+                        <h3>Recent Design Projects</h3>
+                        <div class="projects-list">
+                            <div class="project-item">
+                                <h4>Project Title 1</h4>
+                                <p>Description of a specific curriculum design project, including objectives, methodology, and outcomes.</p>
+                                <div class="project-tags">
+                                    <span class="tag">Undergraduate</span>
+                                    <span class="tag">Interdisciplinary</span>
+                                    <span class="tag">Online Learning</span>
+                                </div>
+                            </div>
+                            
+                            <div class="project-item">
+                                <h4>Project Title 2</h4>
+                                <p>Another curriculum design initiative highlighting innovative approaches and measurable results.</p>
+                                <div class="project-tags">
+                                    <span class="tag">Graduate</span>
+                                    <span class="tag">Research-Based</span>
+                                    <span class="tag">Collaborative</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research & Creative Practice Section -->
+        <section id="research" class="tab-content">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Research & Creative Practice</h2>
+                    <p>Exploring new frontiers through rigorous research and innovative creative work</p>
+                </div>
+                
+                <div class="research-content">
+                    <div class="research-areas">
+                        <h3>Research Areas</h3>
+                        <div class="areas-grid">
+                            <div class="area-card">
+                                <h4>Primary Research Focus</h4>
+                                <p>Detailed description of your main research area, including current projects and future directions.</p>
+                            </div>
+                            
+                            <div class="area-card">
+                                <h4>Secondary Research Interest</h4>
+                                <p>Additional research interests and how they complement your primary focus.</p>
+                            </div>
+                            
+                            <div class="area-card">
+                                <h4>Creative Practice</h4>
+                                <p>Description of your creative work and how it informs and enhances your research.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="current-projects">
+                        <h3>Current Projects</h3>
+                        <div class="project-list">
+                            <div class="research-project">
+                                <div class="project-header">
+                                    <h4>Project Title</h4>
+                                    <span class="project-status">In Progress</span>
+                                </div>
+                                <p class="project-description">
+                                    Comprehensive description of the research project, including objectives, 
+                                    methodology, expected outcomes, and timeline.
+                                </p>
+                                <div class="project-details">
+                                    <span class="project-funding">Funding Source: Grant/Institution</span>
+                                    <span class="project-timeline">Timeline: 2024-2026</span>
+                                </div>
+                            </div>
+                            
+                            <div class="research-project">
+                                <div class="project-header">
+                                    <h4>Collaborative Research Initiative</h4>
+                                    <span class="project-status">Planning</span>
+                                </div>
+                                <p class="project-description">
+                                    Description of collaborative research project with other institutions or researchers.
+                                </p>
+                                <div class="project-details">
+                                    <span class="project-funding">Collaborative Partners: Institution Names</span>
+                                    <span class="project-timeline">Timeline: 2025-2027</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="publications-research">
+                        <h3>Recent Publications</h3>
+                        <div class="publication-highlights">
+                            <div class="publication-item">
+                                <h4>Featured Publication</h4>
+                                <p class="publication-citation">
+                                    Wright, K. (2024). "Title of Recent Publication." <em>Journal Name</em>, 
+                                    Volume(Issue), pages. DOI: 10.xxxx/xxxx
+                                </p>
+                                <p class="publication-abstract">
+                                    Brief abstract or summary of the publication's key findings and contributions to the field.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-envelope"></i> your.email@institution.edu</p>
+                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Your Institution, City, State</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-orcid"></i></a>
+                        <a href="#" class="social-link"><i class="fas fa-graduation-cap"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#cv">Download CV</a></li>
+                        <li><a href="#courses">Course Materials</a></li>
+                        <li><a href="#curriculum">Design Portfolio</a></li>
+                        <li><a href="#research">Research Papers</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Katheryn Wright. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Audio for telephone ring -->
+    <audio id="telephone-ring" loop preload="auto">
+        <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.wav" type="audio/wav">
+        <!-- Fallback to a simple tone -->
+    </audio>
+
+    <script src="script.js"></script>
+</div>
+</body>
+</html>
